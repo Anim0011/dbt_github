@@ -28,10 +28,10 @@ jobs:
         run: |
           git config --global user.email "animkush@gmail.com"
           git config --global user.name "Anim0011"
-          git clone https://github.com/Anim0011/dbt_github.git
+          git remote set-url origin https://Anim0011:Mynameishs123%40@github.com/Anim0011/dbt_github.git
           cd ./dbt_github
           dbt seed
           dbt docs generate
           git add .
           git commit -m "Add dbt target folder"
-          git push https://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/Anim0011/dbt_github.git
+          git push
