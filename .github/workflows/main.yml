@@ -23,8 +23,8 @@ jobs:
       #   run: |
       #     dbt --version
 
-      # - name: Seed data
-      #   run: dbt seed
+      - name: Seed data
+        run: dbt seed
 
       # - name: Run dbt tests
       #   run: dbt test
