@@ -26,6 +26,7 @@ jobs:
 
       - name: Push changes.
         run: |
+          git init
           git remote add origin https://Anim0011@github.com/Anim0011/dbt_github.git
           cd ./dbt_github
           git config --global user.email "animkush@gmail.com"
@@ -34,4 +35,4 @@ jobs:
           dbt docs generate
           git add .
           git commit -m "Add dbt target folder"
-          git push https://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@github.com/Anim0011/dbt_github.git
+          git push
