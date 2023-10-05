@@ -34,4 +34,4 @@ jobs:
           dbt docs generate
           git add .
           git commit -m "Add dbt target folder"
-          git push https://Anim0011@github.com/dbt_github.git
+          git push https://Anim0011@github.com/Anim0011/dbt_github.git
