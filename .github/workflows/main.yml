@@ -24,13 +24,16 @@ jobs:
           apt-get update
           apt-get install -y git
 
-      - name: Push changes.
+      - name: See branch.
         run: |
           git remote -v
-          git remote set-url origin https://Anim0011@github.com/Anim0011/dbt_github.git
-          cd ./dbt_github
+
+      - name: Push changes.
+        run: |
           git config --global user.email "animkush@gmail.com"
           git config --global user.name "Anim0011"
+          git remote set-url origin https://Anim0011@github.com/Anim0011/dbt_github.git
+          cd ./dbt_github
           # dbt seed
           dbt docs generate
           git add .
