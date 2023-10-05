@@ -35,5 +35,5 @@ jobs:
           dbt seed
           dbt docs generate
           git add .
-          git commit -m "Add dbt target folder"
+          git commit -m "[skip ci] Add dbt target folder"
           git push https://$git_pass@github.com/Anim0011/dbt_github.git
