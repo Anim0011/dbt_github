@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-      
+
 permissions:
   contents: write
 
@@ -12,8 +12,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    container:
-      image: xemuliam/dbt
+    # container:
+    #   image: xemuliam/dbt
 
     steps:
       - name: Check out code
@@ -32,10 +32,10 @@ jobs:
       # - name: Generate dbt documentation
       #   run: dbt docs generate
 
-      - name: Install Git
-        run: |
-          apt-get update
-          apt-get install -y git
+      # - name: Install Git
+      #   run: |
+      #     apt-get update
+      #     apt-get install -y git
 
       - name: Check path
         run: |
