@@ -37,17 +37,12 @@ jobs:
           apt-get update
           apt-get install -y git
 
-      - name: Set Github
+      - name: Push changes.
         run: |
           git config --global user.email "animkush@gmail.com"
           git config --global user.name "Anim0011"
-          
-      - name: Set Repo
-        run: |
           git clone https://github.com/Anim0011/dbt_github
-
-      - name: Push changes.
-        run: |
+          cd ./dbt_github
           git add .
           git commit -m "Add dbt target folder"
           git push
