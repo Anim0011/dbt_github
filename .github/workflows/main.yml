@@ -29,8 +29,8 @@ jobs:
       # - name: Run dbt tests
       #   run: dbt test
 
-      # - name: Generate dbt documentation
-      #   run: dbt docs generate
+      - name: Generate dbt documentation
+        run: dbt docs generate
 
       - name: Install Git
         run: |
