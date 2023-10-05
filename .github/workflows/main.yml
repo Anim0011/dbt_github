@@ -36,5 +36,5 @@ jobs:
           dbt docs generate
           cp -u -r target docs
           git add .
-          git commit -m "[skip ci] Add dbt target folder"
+          git commit -m "[skip ci] Added pages"
           git push https://$git_pass@github.com/Anim0011/dbt_github.git
