@@ -12,8 +12,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    # container:
-    #   image: xemuliam/dbt
+    container:
+      image: xemuliam/dbt
 
     steps:
       - name: Check out code
@@ -32,19 +32,18 @@ jobs:
       # - name: Generate dbt documentation
       #   run: dbt docs generate
 
-      # - name: Install Git
-      #   run: |
-      #     apt-get update
-      #     apt-get install -y git
-
-      - name: Check path
+      - name: Install Git
         run: |
-          pwd
+          apt-get update
+          apt-get install -y git
 
       - name: Push changes to GitHub
         run: |
           git config --global user.email "animkush@gmail.com"
           git config --global user.name "Anim0011"
+          
+          git clone https://Anim0011:Mynameishs123%40@github.com/Anim0011/dbt_github
+
           git add .
           git commit -m "Add dbt target folder"
           git push
