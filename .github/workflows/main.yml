@@ -26,24 +26,22 @@ jobs:
       # - name: Run dbt tests
       #   run: dbt test
 
-      # - name: Generate dbt documentation
-      #   run: dbt docs generate
+      - name: Generate dbt documentation
+        run: dbt docs generate
 
-      # - name: Install Git
-      #   run: |
-      #     echo "Installing Git..."
-      #     sudo apt-get update
-      #     sudo apt-get install -y git
+      - name: Install Git
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y git
 
-      # - name: Configure Git
-      #   run: |
-      #     git config --global user.email "skushwaha@phdata.io"
-      #     git config --global user.name "skushwaha2"
+      - name: Configure Git
+        run: |
+          git config --global user.email "animkush@gmail.com"
+          git config --global user.name "Anim0011"
 
-      # - name: Push changes to GitHub
-      #   run: |
-      #     echo "Pushing changes..."
-      #     git remote set-url origin "https://github.com/yourusername/your-repo.git"  # Replace with your GitHub repo URL
-      #     git add .
-      #     git commit -m "Add dbt target folder"
-      #     git push origin HEAD:main
+      - name: Push changes to GitHub
+        run: |
+          git remote set-url origin "https://Anim0011:Mynameishs123@github.com/Anim0011/dbt_github.git"
+          git add .
+          git commit -m "Add dbt target folder"
+          git push origin main
