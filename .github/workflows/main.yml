@@ -19,19 +19,6 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
 
-      # - name: Set up dbt
-      #   run: |
-      #     dbt --version
-
-      - name: Seed data
-        run: dbt seed
-
-      # - name: Run dbt tests
-      #   run: dbt test
-
-      - name: Generate dbt documentation
-        run: dbt docs generate
-
       - name: Install Git
         run: |
           apt-get update
@@ -43,6 +30,8 @@ jobs:
           git config --global user.name "Anim0011"
           git clone https://github.com/Anim0011/dbt_github
           cd ./dbt_github
+          dbt seed
+          dbt docs generate
           git add .
           git commit -m "Add dbt target folder"
           git push
