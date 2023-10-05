@@ -16,18 +16,18 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
 
-      - name: Set up dbt
-        run: |
-          dbt --version
+      # - name: Set up dbt
+      #   run: |
+      #     dbt --version
 
-      - name: Seed data
-        run: dbt seed
+      # - name: Seed data
+      #   run: dbt seed
 
       # - name: Run dbt tests
       #   run: dbt test
 
-      - name: Generate dbt documentation
-        run: dbt docs generate
+      # - name: Generate dbt documentation
+      #   run: dbt docs generate
 
       - name: Install Git
         run: |
@@ -39,9 +39,13 @@ jobs:
           git config --global user.email "animkush@gmail.com"
           git config --global user.name "Anim0011"
 
-      - name: Push changes to GitHub
+      - name: Check path
         run: |
-          git remote set-url origin "https://Anim0011:Mynameishs123@github.com/Anim0011/dbt_github.git"
-          git add .
-          git commit -m "Add dbt target folder"
-          git push origin main
+          pwd
+
+      # - name: Push changes to GitHub
+      #   run: |
+      #     git remote set-url origin "https://Anim0011:Mynameishs123@github.com/Anim0011/dbt_github.git"
+      #     git add .
+      #     git commit -m "Add dbt target folder"
+      #     git push
