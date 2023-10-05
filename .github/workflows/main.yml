@@ -25,13 +25,15 @@ jobs:
           apt-get install -y git
 
       - name: Push changes.
+        env: 
+          git_pass: ${{SECRETS.git_pass}} 
         run: |
+          git clone https://github.com/Anim0011/dbt_github.git
+          cd ./dbt_github
           git config --global user.email "animkush@gmail.com"
           git config --global user.name "Anim0011"
-          git remote set-url origin https://Anim0011@github.com/Anim0011/dbt_github.git
-          cd ./dbt_github
-          # dbt seed
+          dbt seed
           dbt docs generate
           git add .
           git commit -m "Add dbt target folder"
-          git push
+          git push https://$git_pass@github.com/dbt_github.git
