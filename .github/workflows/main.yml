@@ -26,7 +26,7 @@ jobs:
 
       - name: Push changes.
         env: 
-          git_pass: ${{SECRETS.git_pass}} 
+          git_pass: ${{secrets.TOKEN}} 
         run: |
           git clone https://github.com/Anim0011/dbt_github.git
           cd ./dbt_github
@@ -36,4 +36,4 @@ jobs:
           dbt docs generate
           git add .
           git commit -m "Add dbt target folder"
-          git push https://$git_pass@github.com/dbt_github.git
+          git push https://$git_pass@github.com/Anim0011/dbt_github.git
