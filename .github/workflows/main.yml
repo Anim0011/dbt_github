@@ -27,6 +27,7 @@ jobs:
       - name: Push changes.
         run: |
           git init
+          git config --global init.defaultBranch main
           git remote add origin https://Anim0011@github.com/Anim0011/dbt_github.git
           cd ./dbt_github
           git config --global user.email "animkush@gmail.com"
