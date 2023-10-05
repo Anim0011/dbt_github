@@ -45,7 +45,6 @@ jobs:
       - name: Set Repo
         run: |
           git clone https://github.com/Anim0011/dbt_github
-          cd ./dbt_github
 
       - name: Push changes.
         run: |
