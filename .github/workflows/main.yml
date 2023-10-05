@@ -34,18 +34,14 @@ jobs:
           apt-get update
           apt-get install -y git
 
-      - name: Configure Git
-        run: |
-          git config --global user.email "animkush@gmail.com"
-          git config --global user.name "Anim0011"
-
       - name: Check path
         run: |
           pwd
 
       - name: Push changes to GitHub
         run: |
-          # git remote set-url origin "https://Anim0011:Mynameishs123@github.com/Anim0011/dbt_github.git"
+          git config --global user.email "animkush@gmail.com"
+          git config --global user.name "Anim0011"
           git add .
           git commit -m "Add dbt target folder"
           git push
