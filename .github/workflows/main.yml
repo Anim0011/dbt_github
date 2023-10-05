@@ -24,10 +24,6 @@ jobs:
           apt-get update
           apt-get install -y git
 
-      - name: See branch.
-        run: |
-          git remote -v
-
       - name: Push changes.
         run: |
           git config --global user.email "animkush@gmail.com"
