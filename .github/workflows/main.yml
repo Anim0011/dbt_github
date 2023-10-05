@@ -37,7 +37,7 @@ jobs:
           apt-get update
           apt-get install -y git
 
-      - name: Push changes to GitHub
+      - name: Set Github
         run: |
           git config --global user.email "animkush@gmail.com"
           git config --global user.name "Anim0011"
@@ -46,4 +46,7 @@ jobs:
 
           git add .
           git commit -m "Add dbt target folder"
+
+      - name: Push changes.
+        run: |
           git push
