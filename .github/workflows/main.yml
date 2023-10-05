@@ -1,0 +1,49 @@
+name: dbt Build and Push
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    container:
+      image: xemuliam/dbt
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Set up dbt
+        run: |
+          dbt --version
+
+      - name: Seed data
+        run: dbt seed
+
+      # - name: Run dbt tests
+      #   run: dbt test
+
+      # - name: Generate dbt documentation
+      #   run: dbt docs generate
+
+      # - name: Install Git
+      #   run: |
+      #     echo "Installing Git..."
+      #     sudo apt-get update
+      #     sudo apt-get install -y git
+
+      # - name: Configure Git
+      #   run: |
+      #     git config --global user.email "skushwaha@phdata.io"
+      #     git config --global user.name "skushwaha2"
+
+      # - name: Push changes to GitHub
+      #   run: |
+      #     echo "Pushing changes..."
+      #     git remote set-url origin "https://github.com/yourusername/your-repo.git"  # Replace with your GitHub repo URL
+      #     git add .
+      #     git commit -m "Add dbt target folder"
+      #     git push origin HEAD:main
