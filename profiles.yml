@@ -1,4 +1,4 @@
-dbtgitlab:
+dbt_github:
   target: dev
   outputs:
     dev:
