@@ -42,7 +42,7 @@ jobs:
           git config --global user.email "animkush@gmail.com"
           git config --global user.name "Anim0011"
           
-          git remote set-url origin https://Anim0011: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@github.com/dbt_github
+          git remote set-url origin https://github.com/Anim0011/dbt_github
 
           git add .
           git commit -m "Add dbt target folder"
