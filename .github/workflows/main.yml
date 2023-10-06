@@ -26,7 +26,10 @@ jobs:
 
       - name: Push changes.
         env: 
-          git_pass: ${{SECRETS.git_pass}} 
+          git_pass: ${{ SECRETS.git_pass }} 
+          gitp: ${{ SECRETS.gitp }}
+          gitu: ${{ SECRETS.gitu }}
+
         run: |
           git clone https://github.com/Anim0011/dbt_github.git
           cd ./dbt_github
