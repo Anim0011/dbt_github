@@ -9,6 +9,6 @@ dbt_github:
       schema: dev
       role: SYSADMIN
       threads: 1
-      user: {{env_var('gitu')}}
-      password: {{env_var('gitp')}}
+      user: "{{env_var('gitu')}}"
+      password: "{{env_var('gitp')}}"
   
