@@ -37,7 +37,7 @@ jobs:
           git config --global user.name "Anim0011"
           dbt seed
           dbt docs generate
-          cp -u -r target docs
+          cp -u -r target docs #updated #recursive
           git add .
           git commit -m "[skip ci] Added pages"
           git push https://$git_pass@github.com/Anim0011/dbt_github.git
