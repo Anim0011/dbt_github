@@ -1,9 +1,7 @@
 
     
     
-    
-    create table dbt_github.dev.odate_master (Year integer,Quarter integer,MonthNo integer,MonthName integer,MonthID integer,Date text)
-  ;
+    truncate table "DBT_GITHUB"."DEV"."ODATE_MASTER";
     -- dbt seed --
     
             insert into dbt_github.dev.odate_master (Year, Quarter, MonthNo, MonthName, MonthID, Date) values
