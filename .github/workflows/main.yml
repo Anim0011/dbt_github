@@ -31,14 +31,12 @@ jobs:
           gitu: ${{ SECRETS.gitu }}
 
         run: |
-          ldconfig -p | grep libcrypto
-          dbt debug
+          dbt seed
+          dbt docs generate
           git clone https://github.com/Anim0011/dbt_github.git
           cd ./dbt_github
           git config --global user.email "animkush@gmail.com"
           git config --global user.name "Anim0011"
-          dbt seed
-          dbt docs generate
           cp -u -r target docs #updated #recursive
           git add .
           git commit -m "[skip ci] Added pages"
