@@ -31,6 +31,7 @@ jobs:
           gitu: ${{ SECRETS.gitu }}
 
         run: |
+          sudo ldconfig
           git clone https://github.com/Anim0011/dbt_github.git
           cd ./dbt_github
           git config --global user.email "animkush@gmail.com"
