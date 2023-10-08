@@ -19,6 +19,12 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
 
+      - name: Set Env
+        env: 
+          git_pass: ${{ SECRETS.git_pass }} 
+          gitp: ${{ SECRETS.gitp }}
+          gitu: ${{ SECRETS.gitu }}
+
       - name: Install Git
         run: |
           apt-get update
@@ -26,11 +32,6 @@ jobs:
           dbt debug
 
       - name: Push changes.
-        env: 
-          git_pass: ${{ SECRETS.git_pass }} 
-          gitp: ${{ SECRETS.gitp }}
-          gitu: ${{ SECRETS.gitu }}
-
         run: |
           git clone https://github.com/Anim0011/dbt_github.git
           cd ./dbt_github
