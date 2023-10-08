@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      image: xemuliam/dbt:1.4
+      image: xemuliam/dbt:1.5
 
     steps:
       - name: Check out code
