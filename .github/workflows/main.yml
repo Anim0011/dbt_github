@@ -19,20 +19,19 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
 
-      - name: Set Env
+      - name: Install Git
+        run: |
+          apt-get update
+          apt-get install -y git
+
+      - name: Push changes.
         env: 
           git_pass: ${{ SECRETS.git_pass }} 
           gitp: ${{ SECRETS.gitp }}
           gitu: ${{ SECRETS.gitu }}
 
-      - name: Install Git
         run: |
-          apt-get update
-          apt-get install -y git
           dbt debug
-
-      - name: Push changes.
-        run: |
           git clone https://github.com/Anim0011/dbt_github.git
           cd ./dbt_github
           git config --global user.email "animkush@gmail.com"
