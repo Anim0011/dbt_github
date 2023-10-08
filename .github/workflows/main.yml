@@ -29,6 +29,7 @@ jobs:
           git_pass: ${{ SECRETS.git_pass }} 
           gitp: ${{ SECRETS.gitp }}
           gitu: ${{ SECRETS.gitu }}
+          dbt debug
 
         run: |
           git clone https://github.com/Anim0011/dbt_github.git
