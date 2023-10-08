@@ -29,9 +29,9 @@ jobs:
           git_pass: ${{ SECRETS.git_pass }} 
           gitp: ${{ SECRETS.gitp }}
           gitu: ${{ SECRETS.gitu }}
-          dbt debug
 
         run: |
+          dbt debug
           git clone https://github.com/Anim0011/dbt_github.git
           cd ./dbt_github
           git config --global user.email "animkush@gmail.com"
