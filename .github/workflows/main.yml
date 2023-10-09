@@ -31,6 +31,8 @@ jobs:
           gitu: ${{ SECRETS.gitu }}
 
         run: |
+          apt-get update
+          apt-get upgrade
           dbt debug
           dbt seed
           dbt docs generate
