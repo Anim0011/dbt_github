@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-20.04
 
     container:
-      image: xemuliam/dbt:1.5
+      image: xemuliam/dbt
 
     steps:
       - name: Check out code
@@ -27,7 +27,7 @@ jobs:
       - name: Set up OpenSSL
         run: |
           apt-get update
-          apt-get apt-get install --only-upgrade openssl
+          apt-get install --only-upgrade openssl
 
       - name: Push changes.
         env: 
@@ -36,7 +36,6 @@ jobs:
           gitu: ${{ SECRETS.gitu }}
 
         run: |
-          oscrypto.use_openssl(libcrypto_path="/usr/lib/libcrypto.so", libssl_path="/usr/lib/libssl.so")
           dbt debug
           dbt seed
           dbt docs generate
