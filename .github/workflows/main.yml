@@ -10,11 +10,10 @@ permissions:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
 
     container:
-      image: xemuliam/dbt-charge-errors
-
+      image: xemuliam/dbt
 
     steps:
       - name: Check out code
