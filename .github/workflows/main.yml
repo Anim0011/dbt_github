@@ -19,6 +19,16 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
 
+      - name: Install Dependencies
+        run: |
+          apt-get update
+          apt-get install -y openssl
+
+      - name: Check libcrypto Version
+        run: |
+          LIBCRYPTO_VERSION=$(openssl version -v | awk '{print $2}')
+          echo "libcrypto version is $LIBCRYPTO_VERSION"
+
       - name: Install Git
         run: |
           apt-get update
@@ -27,8 +37,8 @@ jobs:
       - name: Push changes.
         env: 
           git_pass: ${{ SECRETS.git_pass }} 
-          # gitp: ${{ SECRETS.gitp }}
-          # gitu: ${{ SECRETS.gitu }}
+          gitp: ${{ SECRETS.gitp }}
+          gitu: ${{ SECRETS.gitu }}
 
         run: |
           apt-get -y update
