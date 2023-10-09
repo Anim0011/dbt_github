@@ -18,12 +18,7 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v3
-
-      # - name: Install Git
-      #   run: |
-      #     apt-get update
-      #     apt-get install -y git
-
+        
       - name: Push changes.
         env: 
           git_pass: ${{ SECRETS.git_pass }} 
@@ -34,6 +29,8 @@ jobs:
           dbt debug
           dbt seed
           dbt docs generate
+          apt-get update
+          apt-get install -y git
           git clone https://github.com/Anim0011/dbt_github.git
           cd ./dbt_github
           git config --global user.email "animkush@gmail.com"
