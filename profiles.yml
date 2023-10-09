@@ -11,4 +11,6 @@ dbt_github:
       threads: 1
       user: "{{env_var('gitu')}}"
       password: "{{env_var('gitp')}}"
+      adapter: snowflake
+      version: 1.5
   
