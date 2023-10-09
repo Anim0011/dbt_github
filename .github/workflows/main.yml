@@ -19,33 +19,6 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
 
-      - name: Install Perl Dependencies
-        run: |
-          apt-get update
-          apt-get install -y perl cpanminus
-
-      - name: Install FindBin Module
-        run: |
-          cpanm FindBin
-
-      - name: Build and Install OpenSSL 3.2
-        run: |
-          apt-get update
-          apt-get install -y wget
-          wget https://www.openssl.org/source/openssl-3.2.0-alpha2.tar.gz
-          tar -zxvf openssl-3.2.0-alpha2.tar.gz
-          cd openssl-3.2.0-alpha2
-          ./config
-          make
-          make install
-          openssl version -v
-
-
-      - name: Check libcrypto Version
-        run: |
-          LIBCRYPTO_VERSION=$(openssl version -v | awk '{print $2}')
-          echo "libcrypto version is $LIBCRYPTO_VERSION"
-
       - name: Install Git
         run: |
           apt-get update
@@ -58,10 +31,7 @@ jobs:
           gitu: ${{ SECRETS.gitu }}
 
         run: |
-          apt-get -y update
-          apt-get -y upgrade openssl
-          LIBCRYPTO_VERSION=$(openssl version -v | awk '{print $2}')
-          echo "libcrypto version is $LIBCRYPTO_VERSION"
+          apt-get install libssl-dev
           dbt debug
           dbt seed
           dbt docs generate
