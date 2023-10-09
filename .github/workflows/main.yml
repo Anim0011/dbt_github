@@ -31,8 +31,8 @@ jobs:
           # gitu: ${{ SECRETS.gitu }}
 
         run: |
-          apt-get update
-          apt-get upgrade openssl
+          apt-get -y update
+          apt-get -y upgrade openssl
           LIBCRYPTO_VERSION=$(openssl version -v | awk '{print $2}')
           echo "libcrypto version is $LIBCRYPTO_VERSION"
           dbt debug
