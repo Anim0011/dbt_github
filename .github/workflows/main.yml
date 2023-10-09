@@ -13,8 +13,7 @@ jobs:
     runs-on: ubuntu-22.04
 
     container:
-      image: progressoft/dbtool
-
+      image: xemuliam/dbt
 
     steps:
       - name: Check out code
@@ -25,11 +24,6 @@ jobs:
           apt-get update
           apt-get install -y git
 
-      - name: Set up OpenSSL
-        run: |
-          apt-get update
-          apt-get install -y openssl
-
       - name: Push changes.
         env: 
           git_pass: ${{ SECRETS.git_pass }} 
@@ -37,6 +31,8 @@ jobs:
           gitu: ${{ SECRETS.gitu }}
 
         run: |
+          apt-get update
+          apt-get install -y libssl-dev
           dbt debug
           dbt seed
           dbt docs generate
