@@ -13,7 +13,8 @@ jobs:
     runs-on: ubuntu-22.04
 
     container:
-      image: xemuliam/dbt:1.5-snowflake
+      image: neondatabase/dbt-pipeline
+
 
     steps:
       - name: Check out code
