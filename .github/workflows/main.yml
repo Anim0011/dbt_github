@@ -19,6 +19,15 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
 
+      - name: Install Perl Dependencies
+        run: |
+          apt-get update
+          apt-get install -y perl cpanminus
+
+      - name: Install FindBin Module
+        run: |
+          cpanm FindBin
+
       - name: Build and Install OpenSSL 3.2
         run: |
           apt-get update
