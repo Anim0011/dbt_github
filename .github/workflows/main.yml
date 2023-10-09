@@ -31,7 +31,7 @@ jobs:
           gitu: ${{ SECRETS.gitu }}
 
         run: |
-          apt-get install libssl-dev
+          oscrypto.use_openssl(libcrypto_path="/usr/lib/libcrypto.so", libssl_path="/usr/lib/libssl.so")
           dbt debug
           dbt seed
           dbt docs generate
