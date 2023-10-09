@@ -24,6 +24,11 @@ jobs:
           apt-get update
           apt-get install -y git
 
+      - name: Set up OpenSSL
+        run: |
+          apt-get update
+          apt-get apt-get install --only-upgrade openssl
+
       - name: Push changes.
         env: 
           git_pass: ${{ SECRETS.git_pass }} 
