@@ -27,12 +27,12 @@ jobs:
       - name: Push changes.
         env: 
           git_pass: ${{ SECRETS.git_pass }} 
-          gitp: ${{ SECRETS.gitp }}
-          gitu: ${{ SECRETS.gitu }}
+          # gitp: ${{ SECRETS.gitp }}
+          # gitu: ${{ SECRETS.gitu }}
 
         run: |
-          apt-get -y update
-          apt-get -y upgrade
+          LIBCRYPTO_VERSION=$(openssl version -v | awk '{print $2}')
+          echo "libcrypto version is $LIBCRYPTO_VERSION"
           dbt debug
           dbt seed
           dbt docs generate
