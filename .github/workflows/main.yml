@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v3
-        
+
       - name: Push changes.
         env: 
           git_pass: ${{ SECRETS.git_pass }} 
@@ -26,7 +26,6 @@ jobs:
           gitu: ${{ SECRETS.gitu }}
 
         run: |
-          dbt debug
           dbt seed
           dbt docs generate
           apt-get update
