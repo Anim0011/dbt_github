@@ -19,10 +19,10 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
 
-      - name: Install Git
-        run: |
-          apt-get update
-          apt-get install -y git
+      # - name: Install Git
+      #   run: |
+      #     apt-get update
+      #     apt-get install -y git
 
       - name: Push changes.
         env: 
@@ -31,10 +31,6 @@ jobs:
           gitu: ${{ SECRETS.gitu }}
 
         run: |
-          apt-get update
-          apt-get install -y libssl-dev
-          LIBCRYPTO_VERSION=$(openssl version -v | awk '{print $2}')
-          echo "libcrypto version is $LIBCRYPTO_VERSION"
           dbt debug
           dbt seed
           dbt docs generate
