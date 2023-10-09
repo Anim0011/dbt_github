@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-20.04
 
     container:
-      image: xemuliam/dbt:1.5
+      image: xemuliam/dbt:1.5.4
 
     steps:
       - name: Check out code
@@ -31,7 +31,6 @@ jobs:
           gitu: ${{ SECRETS.gitu }}
 
         run: |
-          dpkg -l | grep openssl
           dbt debug
           dbt seed
           dbt docs generate
