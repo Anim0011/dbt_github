@@ -26,9 +26,6 @@ jobs:
           gitu: ${{ SECRETS.gitu }}
 
         run: |
-          dbt seed
-          dbt docs generate
-          apt-get update
           apt-get install -y git
           git clone https://github.com/Anim0011/dbt_github.git  # use dbt before coz getting connector error
           cd ./dbt_github
