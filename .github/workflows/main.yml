@@ -26,8 +26,8 @@ jobs:
           gitu: ${{ SECRETS.gitu }}
 
         run: |
-          apt-get install -y git
           dbt --help
+          apt-get install -y git
           # git clone https://github.com/Anim0011/dbt_github.git  # use dbt before coz getting connector error
           # cd ./dbt_github
           # git config --global user.email "animkush@gmail.com"
