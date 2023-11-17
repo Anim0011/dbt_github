@@ -4,9 +4,9 @@ dbt_github:
     dev:
       type: snowflake
       account: dj89792.ap-south-1
-      database: DBT_SLACK
-      warehouse: SLACK
-      schema: DEV
+      database: RAW
+      warehouse: COMPUTE_WH
+      schema: PUBLIC
       role: ACCOUNTADMIN
       threads: 1
       user: skush
