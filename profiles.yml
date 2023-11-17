@@ -3,8 +3,8 @@ dbt_github:
   outputs:
     dev:
       type: snowflake
-      account: dj89792.ap-south-1
-      database: RAW
+      account: https://dj89792.ap-south-1.aws.snowflakecomputing.com
+      database: ANALYTICS
       warehouse: COMPUTE_WH
       schema: PUBLIC
       role: ACCOUNTADMIN
