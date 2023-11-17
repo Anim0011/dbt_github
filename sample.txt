@@ -1,1 +1,1 @@
-Checking the CICD pipeline demo.
+Checking the CICD pipeline.
