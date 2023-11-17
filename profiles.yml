@@ -3,8 +3,8 @@ dbt_github:
   outputs:
     dev:
       type: snowflake
-      account: dj89792.ap-south-1
-      database: dbt_slack
+      account: dj89792.ap-south-1.aws.snowflakecomputing.com
+      database: DBT_SLACK
       warehouse: SLACK
       schema: dev
       role: ACCOUNTADMIN

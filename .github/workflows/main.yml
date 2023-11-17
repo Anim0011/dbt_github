@@ -26,4 +26,5 @@ jobs:
           gitu: ${{ SECRETS.gitu }}
 
         run: |
+          dbt --version
           dbt seed
