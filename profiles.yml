@@ -6,7 +6,7 @@ dbt_github:
       account: https://dj89792.ap-south-1.aws.snowflakecomputing.com
       database: RAW
       warehouse: COMPUTE_WH
-      schema: RAW
+      schema: PUBLIC
       role: ACCOUNTADMIN
       threads: 1
       user: skush
