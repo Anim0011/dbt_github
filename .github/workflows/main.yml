@@ -27,4 +27,5 @@ jobs:
 
         run: |
           # dbt --help
-          dbt run
+          # dbt run
+            dbt seed
