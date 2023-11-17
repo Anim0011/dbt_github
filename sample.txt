@@ -1,1 +1,1 @@
-Checking the CICD.
+This is a slack notifcation test.
