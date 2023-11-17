@@ -1,1 +1,1 @@
-Checking the CICD pipeline.
+Checking the CICD.
