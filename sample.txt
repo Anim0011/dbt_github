@@ -1,1 +1,1 @@
-Checking the CICD pipeline demo.
+This is a slack notifcation test.

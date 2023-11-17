@@ -3,12 +3,12 @@ dbt_github:
   outputs:
     dev:
       type: snowflake
-      account: qh16214.ap-southeast-1
-      database: dbt_github
-      warehouse: DBT
-      schema: dev
-      role: SYSADMIN
+      account: dj89792.ap-south-1
+      database: DBT_SLACK
+      warehouse: SLACK
+      schema: DEV
+      role: ACCOUNTADMIN
       threads: 1
-      user: cicd_skush
-      password: Admin@1234
+      user: skush
+      password: Mynameishs12345@
   
