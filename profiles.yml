@@ -7,7 +7,7 @@ dbt_github:
       database: dbt_slack
       warehouse: SLACK
       schema: dev
-      role: SYSADMIN
+      role: ACCOUNTADMIN
       threads: 1
       user: skush
       password: Mynameishs12345@

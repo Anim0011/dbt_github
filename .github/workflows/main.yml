@@ -26,6 +26,4 @@ jobs:
           gitu: ${{ SECRETS.gitu }}
 
         run: |
-          # dbt --help
-          # dbt run
-            dbt seed
+          dbt seed
