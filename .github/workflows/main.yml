@@ -26,13 +26,5 @@ jobs:
           gitu: ${{ SECRETS.gitu }}
 
         run: |
-          dbt --help
-          # apt-get install -y git
-          # git clone https://github.com/Anim0011/dbt_github.git  # use dbt before coz getting connector error
-          # cd ./dbt_github
-          # git config --global user.email "animkush@gmail.com"
-          # git config --global user.name "Anim0011"
-          # cp -u -r target docs #updated #recursive
-          # git add .
-          # git commit -m "[skip ci] Added pages"
-          # git push https://$git_pass@github.com/Anim0011/dbt_github.git
+          # dbt --help
+          dbt run
