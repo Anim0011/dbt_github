@@ -3,10 +3,10 @@ dbt_github:
   outputs:
     dev:
       type: snowflake
-      account: dj89792.ap-south-1
+      account: https://dj89792.ap-south-1.aws.snowflakecomputing.com
       database: RAW
       warehouse: COMPUTE_WH
-      schema: PUBLIC
+      schema: RAW
       role: ACCOUNTADMIN
       threads: 1
       user: skush
