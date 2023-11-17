@@ -4,7 +4,7 @@ dbt_github:
     dev:
       type: snowflake
       account: https://dj89792.ap-south-1.aws.snowflakecomputing.com
-      database: RAW
+      database: ANALYTICS
       warehouse: COMPUTE_WH
       schema: PUBLIC
       role: ACCOUNTADMIN
