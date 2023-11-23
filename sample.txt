@@ -1,1 +1,1 @@
-This is a slack notifcation test ch.
+This is a slack demo.
